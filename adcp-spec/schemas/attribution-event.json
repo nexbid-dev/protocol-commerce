@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexbid-dev.github.io/protocol-commerce/schemas/attribution-event.json",
+  "title": "AdCP Attribution Event",
+  "description": "Records a value-generating event in the commerce flow",
+  "type": "object",
+  "required": ["eventType", "productId", "campaignId", "queryId"],
+  "properties": {
+    "eventType": {
+      "type": "string",
+      "enum": ["impression", "click", "add_to_cart", "purchase"],
+      "description": "Type of attribution event"
+    },
+    "productId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The product involved"
+    },
+    "campaignId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The campaign that funded the placement"
+    },
+    "queryId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID v7 linking this event to the original search query"
+    },
+    "placementId": {
+      "type": "string",
+      "description": "Publisher placement identifier"
+    },
+    "agentType": {
+      "type": "string",
+      "enum": ["claude", "chatgpt", "gemini", "custom", "unknown"],
+      "description": "Which AI agent served the result"
+    },
+    "geo": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2,
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Where the interaction occurred"
+    }
+  },
+  "additionalProperties": false
+}

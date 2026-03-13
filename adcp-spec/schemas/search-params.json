@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexbid-dev.github.io/protocol-commerce/schemas/search-params.json",
+  "title": "AdCP Search Parameters",
+  "description": "Parameters for the adcp.search message type",
+  "type": "object",
+  "required": ["query"],
+  "properties": {
+    "query": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "Natural language product search query"
+    },
+    "intent": {
+      "type": "string",
+      "enum": ["purchase", "compare", "research", "browse"],
+      "description": "User intent classification"
+    },
+    "geo": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2,
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category filter"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name filter"
+    },
+    "budget_min_cents": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Minimum price filter in cents"
+    },
+    "budget_max_cents": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "description": "Maximum price filter in cents"
+    },
+    "currency": {
+      "type": "string",
+      "enum": ["CHF", "EUR", "USD", "GBP"],
+      "description": "Currency for budget filtering"
+    },
+    "max_results": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50,
+      "default": 10,
+      "description": "Maximum number of results to return"
+    }
+  },
+  "additionalProperties": false
+}

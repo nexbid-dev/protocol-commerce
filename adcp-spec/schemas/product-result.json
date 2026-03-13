@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexbid-dev.github.io/protocol-commerce/schemas/product-result.json",
+  "title": "AdCP Product Result",
+  "description": "A single product in a search response",
+  "type": "object",
+  "required": ["id", "title", "url", "price", "availability", "score"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique product identifier"
+    },
+    "title": {
+      "type": "string",
+      "description": "Product title"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Product description"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Product page URL (merchant site)"
+    },
+    "imageUrl": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Product image URL"
+    },
+    "price": {
+      "$ref": "#/$defs/Price"
+    },
+    "category": {
+      "type": ["string", "null"],
+      "description": "Product category"
+    },
+    "brand": {
+      "type": ["string", "null"],
+      "description": "Brand name"
+    },
+    "availability": {
+      "type": "string",
+      "enum": ["in_stock", "out_of_stock", "preorder"]
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Relevance/auction score (0.0 to 1.0)"
+    },
+    "sponsored": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this result is a paid placement"
+    }
+  },
+  "$defs": {
+    "Price": {
+      "type": "object",
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Display price (not cents)"
+        },
+        "currency": {
+          "type": "string",
+          "enum": ["CHF", "EUR", "USD", "GBP"]
+        }
+      }
+    }
+  }
+}
