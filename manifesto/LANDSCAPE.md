@@ -159,12 +159,4 @@ AdCP is designed to bridge to existing standards:
 | GPP 1.1 / TCF 2.2 | Privacy compliance layer | Q4 2026 |
 | A2A v0.3 | Agent-to-agent communication | 2027+ |
 
-## Sources
 
-- FAZ: AI Advertising Market Analysis (March 2026)
-- SearchEngineLand: OpenAI ChatGPT Instant Checkout Pullback (March 2026)
-- Forrester: What It Means That The Leader In Agentic Commerce Just Pulled Back (March 2026)
-- Google Developers Blog: Universal Commerce Protocol (January 2026)
-- Adobe Analytics: AI-Referred Traffic Report (2025)
-- Salesforce: Generative AI Consumer Behavior Study (2025)
-- Awesome Agents: ACP Integration Tracker (March 2026)
