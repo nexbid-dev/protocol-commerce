@@ -11,6 +11,7 @@ Protocol Commerce is an open initiative to create standardized, auditable, and i
 | [`manifesto/`](manifesto/) | Why open protocols matter for commerce — principles, landscape analysis, and rationale |
 | [`adcp-spec/`](adcp-spec/) | **AdCP v0.1.0** — Agentic Discovery Commerce Protocol specification, JSON schemas, and examples |
 | [`adcp-sdk-typescript/`](adcp-sdk-typescript/) | TypeScript SDK: types, validators, client, and scoring reference implementation |
+| [`webmcp-reference/`](webmcp-reference/) | WebMCP browser integration: expose commerce tools to in-browser AI agents via `navigator.modelContext` |
 
 ## Quick Start
 
