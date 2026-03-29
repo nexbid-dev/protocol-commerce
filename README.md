@@ -51,6 +51,40 @@ Read the full [Technical Manifesto →](manifesto/README.md)
 
 [All 7 principles →](manifesto/PRINCIPLES.md)
 
+## Reference Implementation: Nexbid
+
+[Nexbid](https://nexbid.dev) is the production-grade reference implementation of Protocol Commerce, built by [digital opua GmbH](https://nexbid.dev) (CHE-435.289.702, Switzerland).
+
+| Metric | Status |
+|--------|--------|
+| **MCP Tools** | 5 live — `nexbid_search`, `nexbid_product`, `nexbid_purchase`, `nexbid_categories`, `nexbid_order_status` |
+| **API Endpoints** | 24+ live |
+| **Formal Verification** | 49 Lean 4 theorems (auction logic, budget safety, RBAC, CORS, SSRF) |
+| **Privacy** | Cookie-free, Swiss-hosted (Frankfurt/Zurich), nDSG + GDPR compliant |
+| **AI Provider** | Gemini Flash multi-provider (90% cost reduction) |
+| **Phase** | Production-grade closed beta |
+
+### Connect Any LLM
+
+```json
+{
+  "mcpServers": {
+    "nexbid": {
+      "url": "https://mcp.nexbid.dev/mcp",
+      "transport": "streamable-http"
+    }
+  }
+}
+```
+
+Any MCP-compatible LLM (Claude, GPT-4, Gemini) can directly search, browse, and purchase products through the Nexbid marketplace.
+
+### Why Formal Verification?
+
+Nexbid is the only commerce platform whose core security properties are mathematically proven in [Lean 4](https://lean-lang.org/). 49 theorems cover auction fairness, budget invariants, access control, and network security — not just tested, but proven correct for all possible inputs.
+
+→ [Technology details](https://nexbid.dev/technology) · [All 49 theorems](https://nexbid.dev/docs/verification) · [How Nexbid compares](https://nexbid.dev/compare)
+
 ## Sponsors
 
 | Sponsor | Role |
@@ -59,11 +93,15 @@ Read the full [Technical Manifesto →](manifesto/README.md)
 
 ## License
 
-MIT
+MIT — Use it, fork it, build on it. No strings attached.
 
 ## Links
 
 - [AdCP Specification](adcp-spec/)
 - [Protocol Landscape (ACP vs UCP vs AdCP)](manifesto/LANDSCAPE.md)
 - [Nexbid — Reference Implementation](https://nexbid.dev)
-- [Protocol Commerce Manifesto (DE)](https://digital-opua.ch/blog/protocol-commerce-manifesto)
+- [Nexbid Technology & Facts](https://nexbid.dev/technology)
+- [Nexbid vs. Traditional Ad Servers](https://nexbid.dev/compare)
+- [MCP Documentation](https://nexbid.dev/docs/mcp)
+- [Formal Verification (49 Lean 4 Theorems)](https://nexbid.dev/docs/verification)
+- [Protocol Commerce Manifesto (DE)](https://digital-opua.ch/blog/protocol-commerce--warum-commerce-offene-protokolle-braucht)
