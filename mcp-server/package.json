@@ -1,0 +1,23 @@
+{
+  "name": "@protocol-commerce/mcp-server",
+  "version": "0.1.0",
+  "description": "Nexbid MCP Server — Agentic commerce product discovery for AI agents (stdio transport for introspection)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
