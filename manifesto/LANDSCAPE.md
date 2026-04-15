@@ -13,7 +13,7 @@ A technical comparison of the three dominant agent-commerce protocol approaches 
 | **Publisher Role** | None | None | None | First-class participant |
 | **Privacy Model** | Platform-controlled | Google ecosystem | Amazon ecosystem | No cookies, no fingerprinting |
 | **Scoring Transparency** | Opaque | Opaque | Opaque | Public formula |
-| **Revenue Share** | ~96/4 (OpenAI retains ~4%) | Google-controlled | N/A (Amazon only) | 70/30 default (configurable) |
+| **Revenue Share** | ~96/4 (OpenAI retains ~4%) | Google-controlled | N/A (Amazon only) | 90/10 default (publishers keep 90%) |
 | **Lock-in Risk** | High | High | Maximum | None (MIT) |
 | **Agent Support** | ChatGPT only | Gemini primarily | Alexa/Rufus only | Any MCP-compatible agent |
 
@@ -121,7 +121,7 @@ Agent ──MCP──▶ AdCP Server ──▶ Auction Engine ──▶ Results
 | MCP as transport | Growing ecosystem (Claude, ChatGPT via MCP, custom agents). JSON-RPC 2.0 is well-understood. |
 | First-price sealed-bid | Simpler than second-price. No bid shading. What you bid is what you pay. |
 | Context over identity | Privacy native. Context signals (page topic, intent, affinity) replace user profiles. |
-| Revenue share default | 70/30 (publisher/platform). Configurable per deployment. Transparent. |
+| Revenue share default | 90/10 (publisher keeps 90%, platform 10%). Configurable per deployment. Transparent. |
 | Public scoring formula | `score = 0.4×bid + 0.4×relevance + 0.2×quality`. Verifiable by any participant. |
 
 ### Specification
@@ -143,7 +143,7 @@ Full specification: [adcp-spec](https://github.com/nexbid-dev/protocol-commerce/
 | Multi-Agent Support | ❌ (ChatGPT only) | ⚠️ (Gemini primary) | ❌ (Alexa/Rufus) | ✅ (any MCP agent) |
 | Transparent Scoring | ❌ | ❌ | ❌ | ✅ |
 | Privacy Native | ❌ | ❌ | ❌ | ✅ |
-| Revenue Share Disclosure | ⚠️ (~96/4) | ❌ | N/A | ✅ (70/30 default) |
+| Revenue Share Disclosure | ⚠️ (~96/4) | ❌ | N/A | ✅ (90/10 default) |
 | Existing Ad-Tech Integration | ❌ | ✅ (Google Ads) | ❌ | ✅ (OpenRTB bridge planned) |
 
 ## Standards Interoperability Roadmap
