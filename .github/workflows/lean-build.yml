@@ -1,0 +1,44 @@
+name: Lean Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'lean-verification/**'
+      - '.github/workflows/lean-build.yml'
+  pull_request:
+    paths:
+      - 'lean-verification/**'
+      - '.github/workflows/lean-build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Cache .lake
+        uses: actions/cache@v4
+        with:
+          path: lean-verification/.lake
+          key: lake-${{ runner.os }}-${{ hashFiles('lean-verification/lean-toolchain', 'lean-verification/lakefile.lean', 'lean-verification/lake-manifest.json') }}
+          restore-keys: lake-${{ runner.os }}-
+
+      - name: Build all theorems
+        working-directory: lean-verification
+        run: lake build
+
+      - name: Verify zero sorry/admit
+        working-directory: lean-verification
+        run: |
+          if grep -rEn '\bsorry\b|\badmit\b' --include='*.lean' NexbidVerify/; then
+            echo "::error::Found sorry or admit in proof code"
+            exit 1
+          fi
+          echo "PASS: zero sorry/admit confirmed"

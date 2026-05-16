@@ -101,6 +101,6 @@ MIT — because commerce infrastructure should be auditable, forkable, and free 
 
 ## Further Reading
 
-- [Protocol Commerce Manifesto](https://digital-opua.ch/blog/protocol-commerce-manifesto) — strategic perspective (German)
+- [Protocol Commerce Manifesto](https://digital-opua.ch/blog/protocol-commerce--warum-commerce-offene-protokolle-braucht) — strategic perspective (German)
 - [Nexbid Documentation](https://nexbid.dev) — reference implementation
 - [AdCP Specification](https://github.com/nexbid-dev/protocol-commerce/adcp-spec) — the protocol
