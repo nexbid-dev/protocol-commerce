@@ -1,0 +1,48 @@
+{
+  "amdp_version": "0.1.0",
+  "mandate_id": "01904e4f-bd6c-7d8a-85fa-4f0d7e8f9a0b",
+  "principal": {
+    "id": "did:web:citizen-alice.example",
+    "verifier_url": "https://citizen-alice.example/.well-known/amdp/jwks",
+    "display_name": "Alice Citizen"
+  },
+  "agent": {
+    "id": "did:web:tax-helper-app.example/agents/alice-tax-bot",
+    "name": "Alice's Tax Helper Bot",
+    "model": "anthropic/claude-sonnet-4-7"
+  },
+  "scope": {
+    "vertical": "public-services",
+    "actions": [
+      "submit_request",
+      "approve_form",
+      "query_records"
+    ],
+    "constraints": {
+      "time_window": {
+        "from": "2026-05-17T00:00:00Z",
+        "to": "2026-08-31T23:59:59Z"
+      },
+      "vendor_whitelist": [
+        "tax.gov.zh.ch",
+        "civil-registry.gov.zh.ch"
+      ],
+      "geo_regions": [
+        "CH"
+      ],
+      "data_classes": [
+        "public",
+        "personal-self-only"
+      ]
+    }
+  },
+  "issued_at": "2026-05-17T14:00:00Z",
+  "expires_at": "2026-08-31T23:59:59Z",
+  "revocation_url": "https://citizen-alice.example/.well-known/amdp/verify",
+  "audit_trail_endpoint": "https://citizen-alice.example/.well-known/amdp/audit",
+  "signature": {
+    "algorithm": "hybrid-ed25519-mldsa65",
+    "value": "base64url:placeholder-ed25519-sig-followed-by-mldsa65-sig",
+    "key_id": "alice-2026"
+  }
+}
