@@ -1,0 +1,51 @@
+{
+  "amdp_version": "0.1.0",
+  "mandate_id": "01904ad8-5e1e-7d2a-8b1c-4f5e6a7b8c9d",
+  "principal": {
+    "id": "did:web:brand-x.example",
+    "verifier_url": "https://brand-x.example/.well-known/amdp/jwks",
+    "display_name": "Brand X Marketing GmbH"
+  },
+  "agent": {
+    "id": "did:web:nexbid.dev/agents/media-buyer-bot-7",
+    "name": "Media Buyer Bot 7",
+    "model": "anthropic/claude-opus-4-7"
+  },
+  "scope": {
+    "vertical": "advertising",
+    "actions": [
+      "create_media_buy",
+      "submit_creative",
+      "approve_invoice"
+    ],
+    "constraints": {
+      "max_amount": {
+        "value": 5000,
+        "currency": "CHF",
+        "mode": "cumulative"
+      },
+      "time_window": {
+        "from": "2026-04-01T00:00:00Z",
+        "to": "2026-06-30T23:59:59Z"
+      },
+      "categories": [
+        "food-beverages",
+        "household-goods"
+      ],
+      "geo_regions": [
+        "CH",
+        "DE",
+        "AT"
+      ]
+    }
+  },
+  "issued_at": "2026-03-28T14:00:00Z",
+  "expires_at": "2026-06-30T23:59:59Z",
+  "revocation_url": "https://brand-x.example/.well-known/amdp/verify",
+  "audit_trail_endpoint": "https://brand-x.example/.well-known/amdp/audit",
+  "signature": {
+    "algorithm": "hybrid-ed25519-mldsa65",
+    "value": "base64url:placeholder-ed25519-sig-followed-by-mldsa65-sig",
+    "key_id": "brand-x-2026-q2"
+  }
+}

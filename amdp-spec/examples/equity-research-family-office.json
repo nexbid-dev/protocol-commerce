@@ -1,0 +1,54 @@
+{
+  "amdp_version": "0.1.0",
+  "mandate_id": "01904b1a-7a3c-7e5d-9c2e-1f8a4b5c6d7e",
+  "principal": {
+    "id": "did:web:family-office-alpha.example",
+    "verifier_url": "https://family-office-alpha.example/.well-known/amdp/jwks",
+    "display_name": "Family Office Alpha"
+  },
+  "agent": {
+    "id": "did:web:research-firm.example/agents/mining-equity-researcher",
+    "name": "Mining Equity Researcher",
+    "model": "anthropic/claude-opus-4-7"
+  },
+  "scope": {
+    "vertical": "equity-research",
+    "actions": [
+      "make_investment_decision",
+      "rebalance_portfolio",
+      "subscribe_research_report"
+    ],
+    "constraints": {
+      "max_amount": {
+        "value": 500000,
+        "currency": "USD",
+        "mode": "per_action"
+      },
+      "time_window": {
+        "from": "2026-05-17T00:00:00Z",
+        "to": "2026-11-17T00:00:00Z"
+      },
+      "asset_classes": [
+        "mining-equity",
+        "energy-equity",
+        "rare-earth-equity"
+      ],
+      "geo_regions": [
+        "CA",
+        "AU",
+        "CH",
+        "EU",
+        "UK"
+      ]
+    }
+  },
+  "issued_at": "2026-05-17T10:00:00Z",
+  "expires_at": "2026-11-17T00:00:00Z",
+  "revocation_url": "https://family-office-alpha.example/.well-known/amdp/verify",
+  "audit_trail_endpoint": "https://family-office-alpha.example/.well-known/amdp/audit",
+  "signature": {
+    "algorithm": "hybrid-ed25519-mldsa65",
+    "value": "base64url:placeholder-ed25519-sig-followed-by-mldsa65-sig",
+    "key_id": "family-office-alpha-2026-h2"
+  }
+}
