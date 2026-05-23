@@ -136,6 +136,16 @@ A status code of `200` means the mandate is currently valid for the queried acti
 | [CHANGELOG.md](CHANGELOG.md) | Version history |
 | [REFERENCES.md](REFERENCES.md) | Cross-references to related ADRs, RFCs, IAB Tech Lab, Linux Foundation |
 | [examples/](examples/) | Validated reference mandate documents covering five concrete scenarios |
+| [tools/validate-examples.py](tools/validate-examples.py) | Reference validator — checks every example against the SPECIFICATION.md schema plus the cross-field conformance rules (I-2 UUID v7, I-6 12-month max validity, action-vertical consistency, vertical-specific constraint placement) |
+
+### Validating examples locally
+
+```bash
+pip3 install jsonschema     # one-time
+python3 amdp-spec/tools/validate-examples.py
+```
+
+The validator exits non-zero if any example fails schema or conformance. Use `--quiet` to suppress passing files and `--json` for machine-readable output. The script extracts the JSON Schema directly from `SPECIFICATION.md` section 2.1 at runtime — there is no separate `mandate.schema.json` file, so the schema in the spec is the single source of truth.
 
 ## Why a separate protocol?
 

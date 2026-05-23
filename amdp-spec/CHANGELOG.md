@@ -9,6 +9,18 @@ While AMDP is in Draft (v0.x), breaking changes between MINOR versions are expli
 
 ---
 
+## [Unreleased] — 2026-05-23
+
+### Added
+
+- `tools/validate-examples.py` — reference validator extracting the schema from `SPECIFICATION.md` section 2.1 at runtime, plus cross-field conformance checks (I-2 UUID v7, I-6 12-month max validity, action-vertical consistency per section 4.5, vertical-specific constraint placement per section 5). Documented in README "Validating examples locally".
+
+### Fixed
+
+- `examples/procurement-cross-vendor.json`: shortened `expires_at` from `2027-05-01T00:00:00Z` (367 days after `issued_at`) to `2027-04-28T09:30:00Z` (365 days, exactly one year). Restores compliance with Issuer rule I-6 — "expires_at no later than 12 months from issued_at". Caught by the new validator on first run; the other four examples passed unchanged.
+
+---
+
 ## [0.1.0] — 2026-05-17
 
 ### Added
