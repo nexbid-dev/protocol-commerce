@@ -26,7 +26,7 @@
       },
       "time_window": {
         "from": "2026-05-01T00:00:00Z",
-        "to": "2027-05-01T00:00:00Z"
+        "to": "2027-04-28T09:30:00Z"
       },
       "vendor_whitelist": [
         "office-supplies-co.example",
@@ -49,7 +49,7 @@
     }
   },
   "issued_at": "2026-04-28T09:30:00Z",
-  "expires_at": "2027-05-01T00:00:00Z",
+  "expires_at": "2027-04-28T09:30:00Z",
   "revocation_url": "https://acme-industries.example/.well-known/amdp/verify",
   "audit_trail_endpoint": "https://acme-industries.example/.well-known/amdp/audit",
   "signature": {
