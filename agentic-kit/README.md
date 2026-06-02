@@ -26,7 +26,7 @@ This distinction is the whole point. The Kit makes agent behaviour *accountable*
 | **Verify** | Decision rules are mathematically proven (auction scoring, budget safety, payment bounds, policy) | **Public in this repo** → [`../lean-verification`](../lean-verification) — 47 Lean 4 theorems, zero `sorry`, `lake build`-checkable |
 | **Mandate** | Authorization is portable and cryptographically signed (hybrid Ed25519 + ML-DSA-65, post-quantum-ready) | **Public in this repo** → [`../amdp-spec`](../amdp-spec) — the open Agent Mandate Discovery Protocol (v0.1); reference impl in Nexbid |
 | **Audit** | Every action is appended to a tamper-evident trail | Reference implementation (Nexbid) — append-only logs + signed compliance manifests |
-| **Identity** | Agents are registered and verifiable, not anonymous | Reference implementation (Nexbid) — agent registration + verifiable delivery badge |
+| **Identity** | Agents are registered and verifiable, not anonymous | Reference impl (Nexbid) — agent registration + the [Verified Agent Delivery Badge](./verified-agent-badge.md) |
 
 > **Open-core:** the protocol, the formal proofs, and (over time) the SDK are open
 > (MIT). The hosted operational-audit infrastructure is the reference
@@ -46,7 +46,7 @@ This distinction is the whole point. The Kit makes agent behaviour *accountable*
 
 The Kit is being packaged from working parts, in stages of increasing openness:
 
-1. **Verified-Agent Badge** — a public "this agent's delivery is verified + auditable" signal. *(reference implementation live)*
+1. **[Verified-Agent Delivery Badge](./verified-agent-badge.md)** — a public "this agent's delivery is verified + auditable" signal, backed by a real delivery event (not a self-assigned sticker). *(live in the reference implementation)*
 2. **SDK** — bring your own policy, get a Lean-checked proof + a signed mandate + an audit hook. *(in design)*
 3. **Open standard** — a portable *Verifiable Agent Mandate*, governed in the open: **live as [AMDP v0.1](../amdp-spec)**, the cross-vertical mandate-discovery spec submitted to IAB Tech Lab + Linux Foundation. *(draft — breaking changes expected)*
 
