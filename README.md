@@ -12,6 +12,9 @@ Protocol Commerce is an open initiative to create standardized, auditable, and i
 | [`adcp-spec/`](adcp-spec/) | **AdCP v0.1.0** — Agentic Discovery Commerce Protocol specification, JSON schemas, and examples |
 | [`adcp-sdk-typescript/`](adcp-sdk-typescript/) | TypeScript SDK: types, validators, client, and scoring reference implementation |
 | [`webmcp-reference/`](webmcp-reference/) | WebMCP browser integration: expose commerce tools to in-browser AI agents via `navigator.modelContext` |
+| [`amdp-spec/`](amdp-spec/) | **AMDP v0.1.0** — Agent Mandate Discovery Protocol: cross-vertical authorization spec, JSON schemas, and example mandates |
+| [`agentic-kit/`](agentic-kit/) | **Agentic Kit** — the trust layer: building blocks for verifiable + auditable AI agents |
+| [`lean-verification/`](lean-verification/) | **Lean 4 formal verification** — 47 theorems proving auction/budget/wallet/policy correctness, `lake build`-checkable |
 
 ## Quick Start
 
