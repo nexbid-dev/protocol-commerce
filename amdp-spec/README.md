@@ -166,7 +166,7 @@ AMDP generalizes patterns established in two earlier specifications:
 
 - **ADR-008 Universal Purchase Mandate** (Nexbid, 2026-04-23) defined a single-vertical (commerce / payment) Ed25519-signed mandate format. AMDP extends that pattern cross-vertical and adds a discovery layer. See [REFERENCES.md](REFERENCES.md).
 
-- **ADR-025 Crypto-Agility and PQC Migration** (Nexbid, 2026-04-29) established the Hybrid Ed25519 + ML-DSA-65 signature scheme used in AMDP for post-quantum readiness. AMDP signatures conform to that scheme.
+- **ADR-035 Crypto-Agility and PQC Migration** (Nexbid, 2026-04-29) established the Hybrid Ed25519 + ML-DSA-65 signature scheme used in AMDP for post-quantum readiness. AMDP signatures conform to that scheme.
 
 ## License
 
@@ -197,4 +197,4 @@ Open. Initial draft authored by digital opua GmbH (CHE-435.289.702, Switzerland)
 - Strategy note (positioning): `github.com/Baldri/nexbid/blob/main/docs/strategy/2026-05-17-amdp-google-fuer-agenten-ehrliche-positionierung.md`
 - IAB Tech Lab submission draft: `github.com/Baldri/nexbid/blob/main/docs/outreach/2026-05-17-iab-amdp-submission-draft.md`
 - ADR-008 (single-vertical precedent): `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/008-payment-authorization-and-purchase-mandate.md`
-- ADR-025 (PQC migration): `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/025-crypto-agility-and-pqc-migration.md`
+- ADR-035 (PQC migration): `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/035-crypto-agility-and-pqc-migration.md`

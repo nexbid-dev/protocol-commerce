@@ -19,13 +19,13 @@ This document collects external and internal references relevant to the AMDP spe
   `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/008-payment-authorization-and-purchase-mandate.md`
   Single-vertical (commerce/payment) Ed25519-signed mandate format. AMDP generalizes this pattern cross-vertical.
 
-- **ADR-025 — Crypto-Agility and PQC Migration**
-  `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/025-crypto-agility-and-pqc-migration.md`
+- **ADR-035 — Crypto-Agility and PQC Migration**
+  `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/035-crypto-agility-and-pqc-migration.md`
   Hybrid Ed25519 + ML-DSA-65 signature scheme. AMDP signatures conform to this scheme.
 
 - **ADR-006 — Compliance Manifest (Ed25519 infrastructure)**
   `github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/006-compliance-manifest.md`
-  Original Ed25519 signing infrastructure that ADR-008 and ADR-025 built on.
+  Original Ed25519 signing infrastructure that ADR-008 and ADR-035 built on.
 
 ### Companion documents
 

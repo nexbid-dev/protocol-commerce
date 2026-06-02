@@ -421,7 +421,7 @@ AMDP supports three signature algorithms. Implementations MUST support `hybrid-e
 
 A composite signature scheme: the mandate is signed with both Ed25519 ([RFC 8032](https://www.rfc-editor.org/rfc/rfc8032)) and ML-DSA-65 ([FIPS 204](https://csrc.nist.gov/pubs/fips/204/final)). Both signatures are concatenated and encoded.
 
-Rationale (per [ADR-025](https://github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/025-crypto-agility-and-pqc-migration.md)):
+Rationale (per [ADR-035](https://github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/035-crypto-agility-and-pqc-migration.md)):
 
 - **Classical-validation-fallback:** If a future weakness is found in ML-DSA-65 before its broad deployment, the Ed25519 signature still provides classical security.
 - **PQC-readiness:** When sufficiently capable quantum computers exist (CRQC), the ML-DSA-65 signature remains valid.

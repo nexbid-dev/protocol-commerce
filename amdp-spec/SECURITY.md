@@ -130,7 +130,7 @@ The following six threats define the AMDP security boundary. Each threat is miti
 
 ## 2. Post-quantum cryptography migration strategy
 
-AMDP v0.1.0 uses `hybrid-ed25519-mldsa65` as the RECOMMENDED signature scheme. This section explains the migration path and the rationale, with explicit reference to [ADR-025 — Crypto-Agility and PQC Migration](https://github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/025-crypto-agility-and-pqc-migration.md).
+AMDP v0.1.0 uses `hybrid-ed25519-mldsa65` as the RECOMMENDED signature scheme. This section explains the migration path and the rationale, with explicit reference to [ADR-035 — Crypto-Agility and PQC Migration](https://github.com/Baldri/nexbid/blob/main/docs/knowledge-base/adr/035-crypto-agility-and-pqc-migration.md).
 
 ### 2.1 Hybrid signatures, why now
 
