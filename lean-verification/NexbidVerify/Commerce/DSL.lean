@@ -9,7 +9,13 @@ structure RevenueShare where
   shares_nonneg : 0 ≤ publisherShare ∧ 0 ≤ platformShare
   shares_sum_one : publisherShare + platformShare = 1
 
-/-- Default 70/30 revenue share. -/
+/-- Default 70/30 revenue share — generic library default.
+    Note: This is the example default for the RevenueShare structure,
+    NOT the production tier-pricing. Nexbid's production AdCP match-revenue
+    split uses 90/10 (PLATFORM_FEE_STANDARD = 0.10 in packages/shared/src/pricing.ts,
+    Founding 95/5 via PLATFORM_FEE_FOUNDING = 0.05). Per-customer overrides
+    are stored in the platform_pricing DB table. The proofs in this file are
+    generic over any valid RevenueShare and do not depend on this default. -/
 def defaultRevenueShare : RevenueShare := {
   publisherShare := 7 / 10
   platformShare := 3 / 10

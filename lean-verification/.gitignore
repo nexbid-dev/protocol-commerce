@@ -1,4 +1,8 @@
+# Lean build artifacts
 .lake/
-build/
 *.olean
 *.ilean
+*.c
+
+# macOS
+.DS_Store
