@@ -12,4 +12,9 @@ import NexbidVerify.Commerce.Policy
 import NexbidVerify.EndToEnd
 import NexbidVerify.Monotone
 import NexbidVerify.KanScore
+import NexbidVerify.KanV2Monotone
 import NexbidVerify.Consistency
+import NexbidVerify.Decision.Types
+import NexbidVerify.Decision.Score
+import NexbidVerify.Decision.Gate
+import NexbidVerify.Decision.Monotone
